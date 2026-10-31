@@ -1,0 +1,4672 @@
+{
+  "all": {
+    "attackCases": 77,
+    "benignCases": 13,
+    "cases": 90,
+    "codeRecall": {
+      "expected": 125,
+      "hits": 122,
+      "rate": 0.976
+    },
+    "codesExact": {
+      "matched": 87,
+      "rate": 0.9667
+    },
+    "detection": {
+      "cases": 77,
+      "detected": 74,
+      "rate": 0.961
+    },
+    "detectionByClass": {
+      "critical": {
+        "cases": 27,
+        "detected": 27,
+        "rate": 1.0
+      },
+      "high": {
+        "cases": 31,
+        "detected": 28,
+        "rate": 0.9032
+      },
+      "info": {
+        "cases": 0,
+        "detected": 0,
+        "rate": null
+      },
+      "medium": {
+        "cases": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "unverifiable": {
+        "cases": 14,
+        "detected": 14,
+        "rate": 1.0
+      }
+    },
+    "exitMatch": {
+      "matched": 87,
+      "rate": 0.9667
+    },
+    "falsePositive": {
+      "cases": 13,
+      "falsePositives": 0,
+      "rate": 0.0
+    },
+    "families": {
+      "ann-destructive": {
+        "axis": "annotations",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ann-minor": {
+        "axis": "annotations",
+        "cases": 1,
+        "codesExact": 1,
+        "exitMatch": 1
+      },
+      "ann-openworld": {
+        "axis": "annotations",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ann-readonly-absent": {
+        "axis": "annotations",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ann-readonly-false": {
+        "axis": "annotations",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ben-format": {
+        "axis": "benign",
+        "cases": 3,
+        "codesExact": 3,
+        "exitMatch": 3
+      },
+      "ben-nfc": {
+        "axis": "benign",
+        "cases": 1,
+        "codesExact": 1,
+        "exitMatch": 1
+      },
+      "ben-number": {
+        "axis": "benign",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ben-order": {
+        "axis": "benign",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ben-transport": {
+        "axis": "benign",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ben-version": {
+        "axis": "benign",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "ben-whitespace": {
+        "axis": "benign",
+        "cases": 1,
+        "codesExact": 1,
+        "exitMatch": 1
+      },
+      "combo-mixed": {
+        "axis": "compound",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "combo-rugpull": {
+        "axis": "compound",
+        "cases": 1,
+        "codesExact": 1,
+        "exitMatch": 1
+      },
+      "float-docker": {
+        "axis": "floating",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "float-npm-basic": {
+        "axis": "floating",
+        "cases": 3,
+        "codesExact": 3,
+        "exitMatch": 3
+      },
+      "float-npm-other": {
+        "axis": "floating",
+        "cases": 4,
+        "codesExact": 4,
+        "exitMatch": 4
+      },
+      "float-pypi": {
+        "axis": "floating",
+        "cases": 1,
+        "codesExact": 1,
+        "exitMatch": 1
+      },
+      "float-pypi-range": {
+        "axis": "floating",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "inj-conceal": {
+        "axis": "instruction_injection",
+        "cases": 3,
+        "codesExact": 3,
+        "exitMatch": 3
+      },
+      "inj-ignore": {
+        "axis": "instruction_injection",
+        "cases": 3,
+        "codesExact": 3,
+        "exitMatch": 3
+      },
+      "inj-invisible-tag": {
+        "axis": "invisible_chars",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "inj-invisible-zw": {
+        "axis": "invisible_chars",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "inj-param-desc": {
+        "axis": "instruction_injection",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "inj-paraphrase": {
+        "axis": "instruction_injection",
+        "cases": 3,
+        "codesExact": 0,
+        "exitMatch": 0
+      },
+      "inj-sensitive": {
+        "axis": "instruction_injection",
+        "cases": 3,
+        "codesExact": 3,
+        "exitMatch": 3
+      },
+      "inj-tag": {
+        "axis": "instruction_injection",
+        "cases": 4,
+        "codesExact": 4,
+        "exitMatch": 4
+      },
+      "int-docker": {
+        "axis": "integrity",
+        "cases": 1,
+        "codesExact": 1,
+        "exitMatch": 1
+      },
+      "int-npm": {
+        "axis": "integrity",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "int-pypi-files": {
+        "axis": "integrity",
+        "cases": 3,
+        "codesExact": 3,
+        "exitMatch": 3
+      },
+      "int-pypi-wheel": {
+        "axis": "integrity",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "int-unrecorded": {
+        "axis": "integrity",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "sch-constraint": {
+        "axis": "schema",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "sch-default-host": {
+        "axis": "schema",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "sch-desc-host": {
+        "axis": "schema",
+        "cases": 1,
+        "codesExact": 1,
+        "exitMatch": 1
+      },
+      "sch-dest-optional": {
+        "axis": "schema",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "sch-dest-required": {
+        "axis": "schema",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "sch-exec": {
+        "axis": "schema",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "sch-opt2req": {
+        "axis": "schema",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "tool-add": {
+        "axis": "tool_set",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "tool-add-injected": {
+        "axis": "tool_set",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "tool-remove": {
+        "axis": "tool_set",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      },
+      "tool-rename": {
+        "axis": "tool_set",
+        "cases": 2,
+        "codesExact": 2,
+        "exitMatch": 2
+      }
+    },
+    "floatingExit2": {
+      "cases": 12,
+      "exit2": 12,
+      "rate": 1.0
+    },
+    "misses": [
+      "holdout-inj-paraphrase-01",
+      "holdout-inj-paraphrase-02",
+      "holdout-inj-paraphrase-03"
+    ],
+    "severityExact": {
+      "matched": 87,
+      "rate": 0.9667
+    },
+    "unverifiableExit2": {
+      "cases": 14,
+      "exit2": 14,
+      "rate": 1.0
+    }
+  },
+  "bench": "CapLock Bench v0",
+  "benchVersion": "0.1.0",
+  "caplockVersion": "0.1.0",
+  "cases": [
+    {
+      "axis": "annotations",
+      "family": "ann-destructive",
+      "id": "dev-ann-destructive-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_destructive_added",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_destructive_added",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "annotation_destructive_added",
+            "field": "annotations.destructiveHint",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "write_note"
+          },
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-destructive",
+      "id": "dev-ann-destructive-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_destructive_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_destructive_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "annotation_destructive_added",
+            "field": "annotations.destructiveHint",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-minor",
+      "id": "dev-ann-minor-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_changed"
+        ],
+        "exit": 0,
+        "maxSeverity": "medium"
+      },
+      "observed": {
+        "codes": [
+          "annotation_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "annotation_changed",
+            "field": "annotations.idempotentHint",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-readonly-false",
+      "id": "dev-ann-readonly-false-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_readonly_revoked",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_readonly_revoked",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "annotation_readonly_revoked",
+            "field": "annotations.readOnlyHint",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          },
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-readonly-false",
+      "id": "dev-ann-readonly-false-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_readonly_revoked",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_readonly_revoked",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "annotation_readonly_revoked",
+            "field": "annotations.readOnlyHint",
+            "server": "weather",
+            "severity": "critical",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "weather",
+            "severity": "critical",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-format",
+      "id": "dev-ben-format-01",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-format",
+      "id": "dev-ben-format-02",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-format",
+      "id": "dev-ben-format-03",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-nfc",
+      "id": "dev-ben-nfc-01",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-version",
+      "id": "dev-ben-version-01",
+      "labels": {
+        "benign": true,
+        "codes": [
+          "version_changed"
+        ],
+        "exit": 0,
+        "maxSeverity": "info"
+      },
+      "observed": {
+        "codes": [
+          "version_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "version_changed",
+            "field": "package.version",
+            "server": "notes",
+            "severity": "info"
+          }
+        ],
+        "maxSeverity": "info"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-version",
+      "id": "dev-ben-version-02",
+      "labels": {
+        "benign": true,
+        "codes": [
+          "version_changed"
+        ],
+        "exit": 0,
+        "maxSeverity": "info"
+      },
+      "observed": {
+        "codes": [
+          "version_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "version_changed",
+            "field": "package.version",
+            "server": "weather",
+            "severity": "info"
+          }
+        ],
+        "maxSeverity": "info"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "compound",
+      "family": "combo-rugpull",
+      "id": "dev-combo-rugpull-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection",
+          "version_changed"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection",
+          "version_changed"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          },
+          {
+            "code": "version_changed",
+            "field": "package.version",
+            "server": "notes",
+            "severity": "info"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 3,
+        "codeTotal": 3,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "floating",
+      "family": "float-npm-basic",
+      "id": "dev-float-npm-basic-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "floating",
+      "family": "float-npm-basic",
+      "id": "dev-float-npm-basic-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "floating",
+      "family": "float-npm-basic",
+      "id": "dev-float-npm-basic-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "floating",
+      "family": "float-pypi",
+      "id": "dev-float-pypi-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "weather",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-ignore",
+      "id": "dev-inj-ignore-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-ignore",
+      "id": "dev-inj-ignore-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "write_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-ignore",
+      "id": "dev-inj-ignore-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "fetch_status"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "fetch_status"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "invisible_chars",
+      "family": "inj-invisible-zw",
+      "id": "dev-inj-invisible-zw-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "invisible_chars",
+      "family": "inj-invisible-zw",
+      "id": "dev-inj-invisible-zw-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "write_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-param-desc",
+      "id": "dev-inj-param-desc-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "instruction_injection",
+          "schema_changed"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "instruction_injection",
+          "schema_changed"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "inputSchema.properties.note_id.description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "schema_changed",
+            "field": "inputSchema.properties.note_id",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-param-desc",
+      "id": "dev-inj-param-desc-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "instruction_injection",
+          "schema_changed"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "instruction_injection",
+          "schema_changed"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "inputSchema.properties.city.description",
+            "server": "weather",
+            "severity": "high",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "schema_changed",
+            "field": "inputSchema.properties.city",
+            "server": "weather",
+            "severity": "medium",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-tag",
+      "id": "dev-inj-tag-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-tag",
+      "id": "dev-inj-tag-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "write_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-tag",
+      "id": "dev-inj-tag-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "fetch_status"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "fetch_status"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-tag",
+      "id": "dev-inj-tag-04",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "weather",
+            "severity": "high",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "weather",
+            "severity": "medium",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-npm",
+      "id": "dev-int-npm-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "notes",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-npm",
+      "id": "dev-int-npm-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "notes",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-pypi-wheel",
+      "id": "dev-int-pypi-wheel-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "weather",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-pypi-wheel",
+      "id": "dev-int-pypi-wheel-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "weather",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-constraint",
+      "id": "dev-sch-constraint-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "schema_changed"
+        ],
+        "exit": 0,
+        "maxSeverity": "medium"
+      },
+      "observed": {
+        "codes": [
+          "schema_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "schema_changed",
+            "field": "inputSchema.properties.note_id",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-constraint",
+      "id": "dev-sch-constraint-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "schema_changed"
+        ],
+        "exit": 0,
+        "maxSeverity": "medium"
+      },
+      "observed": {
+        "codes": [
+          "schema_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "schema_changed",
+            "field": "inputSchema.properties.days",
+            "server": "weather",
+            "severity": "medium",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-desc-host",
+      "id": "dev-sch-desc-host-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "network_host_added",
+          "network_host_removed"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "network_host_added",
+          "network_host_removed"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "network_host_added",
+            "field": "capability.networkHosts",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "fetch_status"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "fetch_status"
+          },
+          {
+            "code": "network_host_removed",
+            "field": "capability.networkHosts",
+            "server": "notes",
+            "severity": "info",
+            "tool": "fetch_status"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 3,
+        "codeTotal": 3,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-dest-required",
+      "id": "dev-sch-dest-required-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "capability_expanded",
+          "required_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "capability_expanded",
+          "required_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          },
+          {
+            "code": "required_param_added",
+            "field": "inputSchema.properties.webhook_url",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-dest-required",
+      "id": "dev-sch-dest-required-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "capability_expanded",
+          "required_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "capability_expanded",
+          "required_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "write_note"
+          },
+          {
+            "code": "required_param_added",
+            "field": "inputSchema.properties.recipient",
+            "server": "notes",
+            "severity": "high",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-opt2req",
+      "id": "dev-sch-opt2req-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "required_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "required_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "required_param_added",
+            "field": "inputSchema.required",
+            "server": "notes",
+            "severity": "high",
+            "tool": "fetch_status"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-opt2req",
+      "id": "dev-sch-opt2req-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "required_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "required_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "required_param_added",
+            "field": "inputSchema.required",
+            "server": "weather",
+            "severity": "high",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-add",
+      "id": "dev-tool-add-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "tool_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "tool_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "tool_added",
+            "server": "notes",
+            "severity": "high",
+            "tool": "list_notes"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-add",
+      "id": "dev-tool-add-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "tool_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "tool_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "tool_added",
+            "server": "notes",
+            "severity": "high",
+            "tool": "delete_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-remove",
+      "id": "dev-tool-remove-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "tool_removed"
+        ],
+        "exit": 0,
+        "maxSeverity": "medium"
+      },
+      "observed": {
+        "codes": [
+          "tool_removed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "tool_removed",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "fetch_status"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-remove",
+      "id": "dev-tool-remove-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "tool_removed"
+        ],
+        "exit": 0,
+        "maxSeverity": "medium"
+      },
+      "observed": {
+        "codes": [
+          "tool_removed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "tool_removed",
+            "server": "weather",
+            "severity": "medium",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "dev"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-openworld",
+      "id": "holdout-ann-openworld-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_changed",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_changed",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          },
+          {
+            "code": "annotation_changed",
+            "field": "annotations.openWorldHint",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-openworld",
+      "id": "holdout-ann-openworld-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_changed",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_changed",
+          "capability_expanded"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "write_note"
+          },
+          {
+            "code": "annotation_changed",
+            "field": "annotations.openWorldHint",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-readonly-absent",
+      "id": "holdout-ann-readonly-absent-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_readonly_revoked"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_readonly_revoked"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "annotation_readonly_revoked",
+            "field": "annotations.readOnlyHint",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "annotations",
+      "family": "ann-readonly-absent",
+      "id": "holdout-ann-readonly-absent-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_readonly_revoked"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_readonly_revoked"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "annotation_readonly_revoked",
+            "field": "annotations.readOnlyHint",
+            "server": "weather",
+            "severity": "critical",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-number",
+      "id": "holdout-ben-number-01",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-number",
+      "id": "holdout-ben-number-02",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-order",
+      "id": "holdout-ben-order-01",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-order",
+      "id": "holdout-ben-order-02",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-transport",
+      "id": "holdout-ben-transport-01",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-transport",
+      "id": "holdout-ben-transport-02",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "benign",
+      "family": "ben-whitespace",
+      "id": "holdout-ben-whitespace-01",
+      "labels": {
+        "benign": true,
+        "codes": [],
+        "exit": 0,
+        "maxSeverity": null
+      },
+      "observed": {
+        "codes": [],
+        "exit": 0,
+        "findings": [],
+        "maxSeverity": null
+      },
+      "score": {
+        "codeHits": 0,
+        "codeTotal": 0,
+        "codesExact": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "falsePositive": false,
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "compound",
+      "family": "combo-mixed",
+      "id": "holdout-combo-mixed-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "annotation_readonly_revoked",
+          "capability_expanded",
+          "version_changed"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "annotation_readonly_revoked",
+          "capability_expanded",
+          "version_changed"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "annotation_readonly_revoked",
+            "field": "annotations.readOnlyHint",
+            "server": "weather",
+            "severity": "critical",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "weather",
+            "severity": "critical",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "version_changed",
+            "field": "package.version",
+            "server": "weather",
+            "severity": "info"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 3,
+        "codeTotal": 3,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "compound",
+      "family": "combo-mixed",
+      "id": "holdout-combo-mixed-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch",
+          "tool_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch",
+          "tool_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "notes",
+            "severity": "critical"
+          },
+          {
+            "code": "tool_added",
+            "server": "notes",
+            "severity": "high",
+            "tool": "export_notes"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-docker",
+      "id": "holdout-float-docker-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-docker",
+      "id": "holdout-float-docker-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-npm-other",
+      "id": "holdout-float-npm-other-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-npm-other",
+      "id": "holdout-float-npm-other-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-npm-other",
+      "id": "holdout-float-npm-other-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-npm-other",
+      "id": "holdout-float-npm-other-04",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-pypi-range",
+      "id": "holdout-float-pypi-range-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "weather",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "floating",
+      "family": "float-pypi-range",
+      "id": "holdout-float-pypi-range-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "floating_version"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "floating_version",
+            "field": "package",
+            "server": "weather",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-conceal",
+      "id": "holdout-inj-conceal-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-conceal",
+      "id": "holdout-inj-conceal-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "write_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-conceal",
+      "id": "holdout-inj-conceal-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "fetch_status"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "fetch_status"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "invisible_chars",
+      "family": "inj-invisible-tag",
+      "id": "holdout-inj-invisible-tag-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "invisible_chars",
+      "family": "inj-invisible-tag",
+      "id": "holdout-inj-invisible-tag-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "invisible_chars"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "invisible_chars",
+            "field": "description",
+            "server": "weather",
+            "severity": "high",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "weather",
+            "severity": "medium",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-paraphrase",
+      "id": "holdout-inj-paraphrase-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 2,
+        "codesExact": false,
+        "detected": false,
+        "exitMatch": false,
+        "extraCodes": [],
+        "missingCodes": [
+          "instruction_injection"
+        ],
+        "severityExact": false
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-paraphrase",
+      "id": "holdout-inj-paraphrase-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 2,
+        "codesExact": false,
+        "detected": false,
+        "exitMatch": false,
+        "extraCodes": [],
+        "missingCodes": [
+          "instruction_injection"
+        ],
+        "severityExact": false
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-paraphrase",
+      "id": "holdout-inj-paraphrase-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed"
+        ],
+        "exit": 0,
+        "findings": [
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "fetch_status"
+          }
+        ],
+        "maxSeverity": "medium"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 2,
+        "codesExact": false,
+        "detected": false,
+        "exitMatch": false,
+        "extraCodes": [],
+        "missingCodes": [
+          "instruction_injection"
+        ],
+        "severityExact": false
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-sensitive",
+      "id": "holdout-inj-sensitive-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-sensitive",
+      "id": "holdout-inj-sensitive-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "write_note"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "instruction_injection",
+      "family": "inj-sensitive",
+      "id": "holdout-inj-sensitive-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "description_changed",
+          "instruction_injection"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "weather",
+            "severity": "high",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "description_changed",
+            "field": "description",
+            "server": "weather",
+            "severity": "medium",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-docker",
+      "id": "holdout-int-docker-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "notes",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-pypi-files",
+      "id": "holdout-int-pypi-files-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "weather",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-pypi-files",
+      "id": "holdout-int-pypi-files-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "weather",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-pypi-files",
+      "id": "holdout-int-pypi-files-03",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "integrity_mismatch"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "integrity_mismatch",
+            "field": "package.integrity",
+            "server": "weather",
+            "severity": "critical"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-unrecorded",
+      "id": "holdout-int-unrecorded-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_unrecorded"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "integrity_unrecorded"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "integrity_unrecorded",
+            "field": "package.integrity",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "integrity",
+      "family": "int-unrecorded",
+      "id": "holdout-int-unrecorded-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "integrity_unrecorded"
+        ],
+        "exit": 2,
+        "maxSeverity": "unverifiable"
+      },
+      "observed": {
+        "codes": [
+          "integrity_unrecorded"
+        ],
+        "exit": 2,
+        "findings": [
+          {
+            "code": "integrity_unrecorded",
+            "field": "package.integrity",
+            "server": "notes",
+            "severity": "unverifiable"
+          }
+        ],
+        "maxSeverity": "unverifiable"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-default-host",
+      "id": "holdout-sch-default-host-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "network_host_added",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "network_host_added",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "network_host_added",
+            "field": "capability.networkHosts",
+            "server": "weather",
+            "severity": "critical",
+            "tool": "get_forecast"
+          },
+          {
+            "code": "optional_param_added",
+            "field": "inputSchema.properties.endpoint",
+            "server": "weather",
+            "severity": "medium",
+            "tool": "get_forecast"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-default-host",
+      "id": "holdout-sch-default-host-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "capability_expanded",
+          "network_host_added",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "capability_expanded",
+          "network_host_added",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          },
+          {
+            "code": "network_host_added",
+            "field": "capability.networkHosts",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          },
+          {
+            "code": "optional_param_added",
+            "field": "inputSchema.properties.mirror",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 3,
+        "codeTotal": 3,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-dest-optional",
+      "id": "holdout-sch-dest-optional-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "capability_expanded",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "capability_expanded",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          },
+          {
+            "code": "optional_param_added",
+            "field": "inputSchema.properties.callback_url",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-dest-optional",
+      "id": "holdout-sch-dest-optional-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "capability_expanded",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "capability_expanded",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "write_note"
+          },
+          {
+            "code": "optional_param_added",
+            "field": "inputSchema.properties.bcc",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-exec",
+      "id": "holdout-sch-exec-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "capability_expanded",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "capability_expanded",
+          "optional_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "write_note"
+          },
+          {
+            "code": "optional_param_added",
+            "field": "inputSchema.properties.command",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "schema",
+      "family": "sch-exec",
+      "id": "holdout-sch-exec-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "capability_expanded",
+          "required_param_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "critical"
+      },
+      "observed": {
+        "codes": [
+          "capability_expanded",
+          "required_param_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "capability_expanded",
+            "field": "capability",
+            "server": "notes",
+            "severity": "critical",
+            "tool": "read_note"
+          },
+          {
+            "code": "required_param_added",
+            "field": "inputSchema.properties.script",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "critical"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-add-injected",
+      "id": "holdout-tool-add-injected-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "instruction_injection",
+          "tool_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "instruction_injection",
+          "tool_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "instruction_injection",
+            "field": "description",
+            "server": "notes",
+            "severity": "high",
+            "tool": "search_notes"
+          },
+          {
+            "code": "tool_added",
+            "server": "notes",
+            "severity": "high",
+            "tool": "search_notes"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-add-injected",
+      "id": "holdout-tool-add-injected-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "tool_added"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "tool_added"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "tool_added",
+            "server": "notes",
+            "severity": "high",
+            "tool": "run_shell"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 1,
+        "codeTotal": 1,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-rename",
+      "id": "holdout-tool-rename-01",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "tool_added",
+          "tool_removed"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "tool_added",
+          "tool_removed"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "tool_added",
+            "server": "notes",
+            "severity": "high",
+            "tool": "read_note_v2"
+          },
+          {
+            "code": "tool_removed",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "read_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    },
+    {
+      "axis": "tool_set",
+      "family": "tool-rename",
+      "id": "holdout-tool-rename-02",
+      "labels": {
+        "benign": false,
+        "codes": [
+          "tool_added",
+          "tool_removed"
+        ],
+        "exit": 1,
+        "maxSeverity": "high"
+      },
+      "observed": {
+        "codes": [
+          "tool_added",
+          "tool_removed"
+        ],
+        "exit": 1,
+        "findings": [
+          {
+            "code": "tool_added",
+            "server": "notes",
+            "severity": "high",
+            "tool": "writeNote"
+          },
+          {
+            "code": "tool_removed",
+            "server": "notes",
+            "severity": "medium",
+            "tool": "write_note"
+          }
+        ],
+        "maxSeverity": "high"
+      },
+      "score": {
+        "codeHits": 2,
+        "codeTotal": 2,
+        "codesExact": true,
+        "detected": true,
+        "exitMatch": true,
+        "extraCodes": [],
+        "missingCodes": [],
+        "severityExact": true
+      },
+      "split": "holdout"
+    }
+  ],
+  "corpusDigest": "sha256:45d8a333cd01d9e3adbba2ad1e7ef77bb0c7bf927919788ff191bf876b848562",
+  "corpusVersion": "0.1.0",
+  "environment": {
+    "platform": "Darwin",
+    "python": "3.12.13"
+  },
+  "failOn": "high",
+  "generatedAt": "2026-10-31T09:10:53Z",
+  "notice": "CapLock pins the declared tool surface and the package identity. It does not attest to the runtime behavior or safety of any server.",
+  "otherTools": [
+    {
+      "checkedAt": "2026-10-31",
+      "name": "Snyk Agent Scan (formerly Invariant Labs mcp-scan)",
+      "reasons": [
+        "Condition (b) fails: the current README says scanning sends \"tool names and descriptions\" (with server configurations and signatures) to the analysis service, and a token must be set before any scan. Sending tool descriptions to an external API is incompatible with CapLock's product principle, so it was not run on the corpus.",
+        "The README's `inspect` command (\"Inspect components without analysis\") gives no change verdict, so it is not a comparable detector; the README does not say whether it is network-free.",
+        "Older Invariant documentation describes a `--local-only` flag that skips the Invariant API but runs an LLM-based check needing an OpenAI API key, i.e. still an external API; the flag is not in the current README. Either way condition (b) is not met.",
+        "No number is reported for this tool. It was not installed or executed."
+      ],
+      "sources": [
+        "https://github.com/snyk/agent-scan (README, fetched 2026-10-31; github.com/invariantlabs-ai/mcp-scan now resolves there)",
+        "https://explorer.invariantlabs.ai/docs/mcp-scan/scanning (older docs describing --local-only)"
+      ],
+      "status": "unmeasured"
+    },
+    {
+      "checkedAt": "2026-10-31",
+      "name": "mcp-lock (@mcpguards/mcp-lock 0.1.2)",
+      "reasons": [
+        "Condition (b) is met as far as the README shows: it records npm version and tarball integrity and does not read tool descriptions.",
+        "Condition (a) fails for this corpus: verification resolves against the live npm registry (its exit code 3 is \"Network / registry error\") and the README documents no option for recorded registry metadata. The corpus packages (@caplock-demo/*) are synthetic and do not exist on npm, so the tool cannot run locally against these cases.",
+        "Scope differs: npm packages only (the README shows a PyPI server as \"not lockable\"), no tool-surface or capability checks. Only the npm integrity and npm floating cases would be in its scope.",
+        "No number is reported for this tool. It was not installed or executed."
+      ],
+      "sources": [
+        "https://registry.npmjs.org/@mcpguards%2fmcp-lock (package metadata and README, fetched 2026-10-31)"
+      ],
+      "status": "unmeasured"
+    }
+  ],
+  "ruleCatalogVersion": "1.0.0",
+  "splits": {
+    "dev": {
+      "attackCases": 36,
+      "benignCases": 6,
+      "cases": 42,
+      "codeRecall": {
+        "expected": 58,
+        "hits": 58,
+        "rate": 1.0
+      },
+      "codesExact": {
+        "matched": 42,
+        "rate": 1.0
+      },
+      "detection": {
+        "cases": 36,
+        "detected": 36,
+        "rate": 1.0
+      },
+      "detectionByClass": {
+        "critical": {
+          "cases": 11,
+          "detected": 11,
+          "rate": 1.0
+        },
+        "high": {
+          "cases": 16,
+          "detected": 16,
+          "rate": 1.0
+        },
+        "info": {
+          "cases": 0,
+          "detected": 0,
+          "rate": null
+        },
+        "medium": {
+          "cases": 5,
+          "detected": 5,
+          "rate": 1.0
+        },
+        "unverifiable": {
+          "cases": 4,
+          "detected": 4,
+          "rate": 1.0
+        }
+      },
+      "exitMatch": {
+        "matched": 42,
+        "rate": 1.0
+      },
+      "falsePositive": {
+        "cases": 6,
+        "falsePositives": 0,
+        "rate": 0.0
+      },
+      "families": {
+        "ann-destructive": {
+          "axis": "annotations",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "ann-minor": {
+          "axis": "annotations",
+          "cases": 1,
+          "codesExact": 1,
+          "exitMatch": 1
+        },
+        "ann-readonly-false": {
+          "axis": "annotations",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "ben-format": {
+          "axis": "benign",
+          "cases": 3,
+          "codesExact": 3,
+          "exitMatch": 3
+        },
+        "ben-nfc": {
+          "axis": "benign",
+          "cases": 1,
+          "codesExact": 1,
+          "exitMatch": 1
+        },
+        "ben-version": {
+          "axis": "benign",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "combo-rugpull": {
+          "axis": "compound",
+          "cases": 1,
+          "codesExact": 1,
+          "exitMatch": 1
+        },
+        "float-npm-basic": {
+          "axis": "floating",
+          "cases": 3,
+          "codesExact": 3,
+          "exitMatch": 3
+        },
+        "float-pypi": {
+          "axis": "floating",
+          "cases": 1,
+          "codesExact": 1,
+          "exitMatch": 1
+        },
+        "inj-ignore": {
+          "axis": "instruction_injection",
+          "cases": 3,
+          "codesExact": 3,
+          "exitMatch": 3
+        },
+        "inj-invisible-zw": {
+          "axis": "invisible_chars",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "inj-param-desc": {
+          "axis": "instruction_injection",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "inj-tag": {
+          "axis": "instruction_injection",
+          "cases": 4,
+          "codesExact": 4,
+          "exitMatch": 4
+        },
+        "int-npm": {
+          "axis": "integrity",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "int-pypi-wheel": {
+          "axis": "integrity",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "sch-constraint": {
+          "axis": "schema",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "sch-desc-host": {
+          "axis": "schema",
+          "cases": 1,
+          "codesExact": 1,
+          "exitMatch": 1
+        },
+        "sch-dest-required": {
+          "axis": "schema",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "sch-opt2req": {
+          "axis": "schema",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "tool-add": {
+          "axis": "tool_set",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "tool-remove": {
+          "axis": "tool_set",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        }
+      },
+      "floatingExit2": {
+        "cases": 4,
+        "exit2": 4,
+        "rate": 1.0
+      },
+      "misses": [],
+      "severityExact": {
+        "matched": 42,
+        "rate": 1.0
+      },
+      "unverifiableExit2": {
+        "cases": 4,
+        "exit2": 4,
+        "rate": 1.0
+      }
+    },
+    "holdout": {
+      "attackCases": 41,
+      "benignCases": 7,
+      "cases": 48,
+      "codeRecall": {
+        "expected": 67,
+        "hits": 64,
+        "rate": 0.9552
+      },
+      "codesExact": {
+        "matched": 45,
+        "rate": 0.9375
+      },
+      "detection": {
+        "cases": 41,
+        "detected": 38,
+        "rate": 0.9268
+      },
+      "detectionByClass": {
+        "critical": {
+          "cases": 16,
+          "detected": 16,
+          "rate": 1.0
+        },
+        "high": {
+          "cases": 15,
+          "detected": 12,
+          "rate": 0.8
+        },
+        "info": {
+          "cases": 0,
+          "detected": 0,
+          "rate": null
+        },
+        "medium": {
+          "cases": 0,
+          "detected": 0,
+          "rate": null
+        },
+        "unverifiable": {
+          "cases": 10,
+          "detected": 10,
+          "rate": 1.0
+        }
+      },
+      "exitMatch": {
+        "matched": 45,
+        "rate": 0.9375
+      },
+      "falsePositive": {
+        "cases": 7,
+        "falsePositives": 0,
+        "rate": 0.0
+      },
+      "families": {
+        "ann-openworld": {
+          "axis": "annotations",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "ann-readonly-absent": {
+          "axis": "annotations",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "ben-number": {
+          "axis": "benign",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "ben-order": {
+          "axis": "benign",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "ben-transport": {
+          "axis": "benign",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "ben-whitespace": {
+          "axis": "benign",
+          "cases": 1,
+          "codesExact": 1,
+          "exitMatch": 1
+        },
+        "combo-mixed": {
+          "axis": "compound",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "float-docker": {
+          "axis": "floating",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "float-npm-other": {
+          "axis": "floating",
+          "cases": 4,
+          "codesExact": 4,
+          "exitMatch": 4
+        },
+        "float-pypi-range": {
+          "axis": "floating",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "inj-conceal": {
+          "axis": "instruction_injection",
+          "cases": 3,
+          "codesExact": 3,
+          "exitMatch": 3
+        },
+        "inj-invisible-tag": {
+          "axis": "invisible_chars",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "inj-paraphrase": {
+          "axis": "instruction_injection",
+          "cases": 3,
+          "codesExact": 0,
+          "exitMatch": 0
+        },
+        "inj-sensitive": {
+          "axis": "instruction_injection",
+          "cases": 3,
+          "codesExact": 3,
+          "exitMatch": 3
+        },
+        "int-docker": {
+          "axis": "integrity",
+          "cases": 1,
+          "codesExact": 1,
+          "exitMatch": 1
+        },
+        "int-pypi-files": {
+          "axis": "integrity",
+          "cases": 3,
+          "codesExact": 3,
+          "exitMatch": 3
+        },
+        "int-unrecorded": {
+          "axis": "integrity",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "sch-default-host": {
+          "axis": "schema",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "sch-dest-optional": {
+          "axis": "schema",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "sch-exec": {
+          "axis": "schema",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "tool-add-injected": {
+          "axis": "tool_set",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        },
+        "tool-rename": {
+          "axis": "tool_set",
+          "cases": 2,
+          "codesExact": 2,
+          "exitMatch": 2
+        }
+      },
+      "floatingExit2": {
+        "cases": 8,
+        "exit2": 8,
+        "rate": 1.0
+      },
+      "misses": [
+        "holdout-inj-paraphrase-01",
+        "holdout-inj-paraphrase-02",
+        "holdout-inj-paraphrase-03"
+      ],
+      "severityExact": {
+        "matched": 45,
+        "rate": 0.9375
+      },
+      "unverifiableExit2": {
+        "cases": 10,
+        "exit2": 10,
+        "rate": 1.0
+      }
+    }
+  }
+}

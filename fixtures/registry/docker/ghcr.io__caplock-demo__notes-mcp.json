@@ -1,0 +1,7 @@
+{
+  "_fixture": "Recorded fixture. Synthetic package in the caplock-demo namespace; integrity values are deterministic test data, not real artifacts.",
+  "tags": {
+    "1.0.0": "sha256:000d2184cb58d8c3135e04c5a7ee43badae3bb0514a53103cf37a633a6e40f12",
+    "latest": "sha256:000d2184cb58d8c3135e04c5a7ee43badae3bb0514a53103cf37a633a6e40f12"
+  }
+}

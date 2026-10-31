@@ -1,0 +1,23 @@
+{
+  "_fixture": "Scenario F overlay: version 1.0.0 now resolves to a different tarball integrity (code changed, tool definitions unchanged).",
+  "name": "@caplock-demo/notes-mcp",
+  "dist-tags": {
+    "latest": "1.0.1"
+  },
+  "versions": {
+    "1.0.0": {
+      "name": "@caplock-demo/notes-mcp",
+      "version": "1.0.0",
+      "dist": {
+        "integrity": "sha512-kjJ8BRx2APl3MyX0VTEgbW8488n5JbjoQgn1j6mV+mOhPUWemuVkRL9PJAZcDHtLeJFroPyE1K6gpozZPqUBzg=="
+      }
+    },
+    "1.0.1": {
+      "name": "@caplock-demo/notes-mcp",
+      "version": "1.0.1",
+      "dist": {
+        "integrity": "sha512-rhfBjzj5lB5e1FXzZdBGkFQfY4npUL2XRWh+9zoRiWSyYC+kTn0mSycfV26bH3trz4YaV7VnUsWWqs1iLujaPg=="
+      }
+    }
+  }
+}

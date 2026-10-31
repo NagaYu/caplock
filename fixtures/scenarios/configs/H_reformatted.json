@@ -1,0 +1,5 @@
+// Same configuration as the demo workspace: comments, key order and whitespace differ only.
+{"servers":{"notes":{"env":{"NOTES_TOKEN":"${env:NOTES_TOKEN}"},
+      "args":[ "-y",   "@caplock-demo/notes-mcp@1.0.0" ],   "command" : "npx",
+  "type":"stdio",   /* trailing comma below is JSONC */
+}}}

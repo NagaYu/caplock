@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."]
+    },
+    "fetch": {
+      "type": "local",
+      "command": "uvx",
+      "args": ["mcp-server-fetch@latest"],
+      "tools": ["*"]
+    },
+    "time": {
+      "command": "uvx",
+      "args": ["mcp-server-time==0.6.2"]
+    },
+    "custom": {
+      "command": "node",
+      "args": ["./tools/server.js"],
+      "env": { "LOG_LEVEL": "${env:LOG_LEVEL}" }
+    },
+    "remote-search": {
+      "type": "http",
+      "url": "https://search.example.net/mcp",
+      "headers": { "X-Api-Key": "${env:SEARCH_API_KEY}" }
+    }
+  }
+}

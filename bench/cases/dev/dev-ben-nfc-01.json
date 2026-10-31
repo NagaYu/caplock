@@ -1,0 +1,109 @@
+{
+  "axis": "benign",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "fetch_status.description in NFD ('donn\u00e9es' decomposed)",
+  "family": "ben-nfc",
+  "id": "dev-ben-nfc-01",
+  "labels": {
+    "benign": true,
+    "codes": [],
+    "exit": 0,
+    "maxSeverity": null
+  },
+  "mutation": {
+    "notes_tools": {
+      "prompts": [
+        {
+          "description": "Summarize recent notes.",
+          "name": "summarize_notes"
+        }
+      ],
+      "resources": [
+        {
+          "mimeType": "application/json",
+          "name": "Notes index",
+          "uri": "notes://index"
+        }
+      ],
+      "tools": [
+        {
+          "annotations": {
+            "openWorldHint": false,
+            "readOnlyHint": true
+          },
+          "description": "Read a note by its identifier and return its text.",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {
+              "note_id": {
+                "description": "Identifier of the note.",
+                "maxLength": 64,
+                "type": "string"
+              }
+            },
+            "required": [
+              "note_id"
+            ],
+            "type": "object"
+          },
+          "name": "read_note",
+          "title": "Read note"
+        },
+        {
+          "annotations": {
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false,
+            "readOnlyHint": false
+          },
+          "description": "Create or overwrite a note in the local notes store.",
+          "inputSchema": {
+            "properties": {
+              "content": {
+                "type": "string"
+              },
+              "note_id": {
+                "maxLength": 64,
+                "type": "string"
+              },
+              "tags": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "note_id",
+              "content"
+            ],
+            "type": "object"
+          },
+          "name": "write_note",
+          "title": "Write note"
+        },
+        {
+          "annotations": {
+            "openWorldHint": true,
+            "readOnlyHint": true
+          },
+          "description": "Fetch the public service status summary (donne\u0301es publiques) from https://status.example.com/api/v1/summary.",
+          "inputSchema": {
+            "properties": {
+              "component": {
+                "description": "Optional component name to filter by.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "name": "fetch_status",
+          "title": "Fetch service status"
+        }
+      ]
+    }
+  },
+  "seed": "H",
+  "split": "dev"
+}

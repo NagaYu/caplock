@@ -1,0 +1,19 @@
+{
+  "axis": "benign",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "VS Code config with comments, trailing comma and other key order",
+  "family": "ben-format",
+  "id": "dev-ben-format-02",
+  "labels": {
+    "benign": true,
+    "codes": [],
+    "exit": 0,
+    "maxSeverity": null
+  },
+  "mutation": {
+    "vscode_config": "// reformatted\n{\"servers\":{\"notes\":{\"env\":{\"NOTES_TOKEN\":\"${env:NOTES_TOKEN}\"},\"args\":[\"-y\",  \"@caplock-demo/notes-mcp@1.0.0\"],\"command\":\"npx\",\"type\":\"stdio\",}}}\n"
+  },
+  "seed": "H",
+  "split": "dev"
+}

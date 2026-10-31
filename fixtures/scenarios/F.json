@@ -1,0 +1,14 @@
+{
+  "id": "F",
+  "title": "Code-only change (postmark-style): same version, different tarball integrity, tool definitions unchanged",
+  "after": {
+    "registry_overlay": "F-code-only"
+  },
+  "expect": {
+    "exit": 1,
+    "maxSeverity": "critical",
+    "codes": [
+      "integrity_mismatch"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "axis": "benign",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "notes 1.0.0 \u2192 1.0.1",
+  "family": "ben-version",
+  "id": "dev-ben-version-01",
+  "labels": {
+    "benign": true,
+    "codes": [
+      "version_changed"
+    ],
+    "exit": 0,
+    "maxSeverity": "info"
+  },
+  "mutation": {
+    "vscode_config": "{\n  \"servers\": {\n    \"notes\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@caplock-demo/notes-mcp@1.0.1\"\n      ],\n      \"env\": {\n        \"NOTES_TOKEN\": \"${env:NOTES_TOKEN}\"\n      }\n    }\n  }\n}\n"
+  },
+  "seed": "I",
+  "split": "dev"
+}

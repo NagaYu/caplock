@@ -1,0 +1,23 @@
+{
+  "axis": "tool_set",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "get_forecast removed (weather has no tools)",
+  "family": "tool-remove",
+  "id": "dev-tool-remove-02",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "tool_removed"
+    ],
+    "exit": 0,
+    "maxSeverity": "medium"
+  },
+  "mutation": {
+    "weather_tools": {
+      "tools": []
+    }
+  },
+  "seed": "E",
+  "split": "dev"
+}

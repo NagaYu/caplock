@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Snyk Agent Scan (formerly Invariant Labs mcp-scan)",
+    "status": "unmeasured",
+    "checkedAt": "2026-10-31",
+    "reasons": [
+      "Condition (b) fails: the current README says scanning sends \"tool names and descriptions\" (with server configurations and signatures) to the analysis service, and a token must be set before any scan. Sending tool descriptions to an external API is incompatible with CapLock's product principle, so it was not run on the corpus.",
+      "The README's `inspect` command (\"Inspect components without analysis\") gives no change verdict, so it is not a comparable detector; the README does not say whether it is network-free.",
+      "Older Invariant documentation describes a `--local-only` flag that skips the Invariant API but runs an LLM-based check needing an OpenAI API key, i.e. still an external API; the flag is not in the current README. Either way condition (b) is not met.",
+      "No number is reported for this tool. It was not installed or executed."
+    ],
+    "sources": [
+      "https://github.com/snyk/agent-scan (README, fetched 2026-10-31; github.com/invariantlabs-ai/mcp-scan now resolves there)",
+      "https://explorer.invariantlabs.ai/docs/mcp-scan/scanning (older docs describing --local-only)"
+    ]
+  },
+  {
+    "name": "mcp-lock (@mcpguards/mcp-lock 0.1.2)",
+    "status": "unmeasured",
+    "checkedAt": "2026-10-31",
+    "reasons": [
+      "Condition (b) is met as far as the README shows: it records npm version and tarball integrity and does not read tool descriptions.",
+      "Condition (a) fails for this corpus: verification resolves against the live npm registry (its exit code 3 is \"Network / registry error\") and the README documents no option for recorded registry metadata. The corpus packages (@caplock-demo/*) are synthetic and do not exist on npm, so the tool cannot run locally against these cases.",
+      "Scope differs: npm packages only (the README shows a PyPI server as \"not lockable\"), no tool-surface or capability checks. Only the npm integrity and npm floating cases would be in its scope.",
+      "No number is reported for this tool. It was not installed or executed."
+    ],
+    "sources": [
+      "https://registry.npmjs.org/@mcpguards%2fmcp-lock (package metadata and README, fetched 2026-10-31)"
+    ]
+  }
+]

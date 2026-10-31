@@ -1,0 +1,14 @@
+{
+  "id": "I",
+  "title": "Benign: version bump only, tool surface unchanged",
+  "after": {
+    "vscode_config": "I_version_bump.json"
+  },
+  "expect": {
+    "exit": 0,
+    "maxSeverity": "info",
+    "codes": [
+      "version_changed"
+    ]
+  }
+}

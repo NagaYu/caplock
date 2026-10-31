@@ -1,0 +1,14 @@
+{
+  "id": "G2",
+  "title": "Floating spec: @latest",
+  "after": {
+    "vscode_config": "G2_latest.json"
+  },
+  "expect": {
+    "exit": 2,
+    "maxSeverity": "unverifiable",
+    "codes": [
+      "floating_version"
+    ]
+  }
+}

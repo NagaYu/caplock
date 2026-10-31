@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory@^2025.4.0"]
+    },
+    "sqlite": {
+      "command": "docker",
+      "args": ["run", "--rm", "-i", "-v", "mcp-test:/mcp", "mcp/sqlite"]
+    }
+  }
+}

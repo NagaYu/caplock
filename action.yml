@@ -1,0 +1,142 @@
+name: CapLock verify
+description: >-
+  Verify MCP server configuration, package identity and tool surface against mcp-lock.json,
+  publish SARIF and a PR summary. Pins identity; does not attest to server behavior.
+author: CapLock
+branding:
+  icon: lock
+  color: gray-dark
+
+inputs:
+  workspace:
+    description: Workspace directory containing .vscode/mcp.json and/or .mcp.json.
+    required: false
+    default: "."
+  lockfile:
+    description: Lockfile path, relative to the workspace unless absolute.
+    required: false
+    default: "mcp-lock.json"
+  fail-on:
+    description: >-
+      Lowest severity that fails the step (info, medium, high, critical, never).
+      Unverifiable items always fail with exit 2, even with "never".
+    required: false
+    default: "high"
+  online:
+    description: >-
+      "true" to resolve npm/PyPI metadata live (--online). Only package names and versions are sent.
+      Default is offline: commit registry records and pass them with extra-args "--registry DIR".
+    required: false
+    default: "false"
+  upload-sarif:
+    description: Upload the SARIF log to GitHub code scanning (needs security-events write).
+    required: false
+    default: "true"
+  comment-pr:
+    description: Post or update one CapLock comment on the pull request (needs pull-requests write).
+    required: false
+    default: "true"
+  extra-args:
+    description: >-
+      Extra caplock verify arguments, split with shell-like quoting (no shell evaluation), e.g.
+      --registry fixtures/registry --surface docs=surfaces/docs.json --launch "notes=python srv.py".
+    required: false
+    default: ""
+
+outputs:
+  exit-code:
+    description: caplock verify exit code (0 pass, 1 findings at/above fail-on, 2 unverifiable, 3 usage error).
+    value: ${{ steps.verify.outputs.exit-code }}
+  sarif-file:
+    description: Path of the SARIF log.
+    value: ${{ steps.verify.outputs.sarif-file }}
+  markdown-file:
+    description: Path of the Markdown summary.
+    value: ${{ steps.verify.outputs.markdown-file }}
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+      with:
+        python-version: "3.12"
+
+    - name: Install CapLock
+      shell: bash
+      env:
+        CAPLOCK_SRC: ${{ github.action_path }}
+      run: python -m pip install --disable-pip-version-check "$CAPLOCK_SRC"
+
+    - name: caplock verify
+      id: verify
+      shell: bash
+      env:
+        CAPLOCK_WORKSPACE: ${{ inputs.workspace }}
+        CAPLOCK_LOCKFILE: ${{ inputs.lockfile }}
+        CAPLOCK_FAIL_ON: ${{ inputs.fail-on }}
+        CAPLOCK_ONLINE: ${{ inputs.online }}
+        CAPLOCK_EXTRA_ARGS: ${{ inputs.extra-args }}
+      run: |
+        set -u
+        sarif="$RUNNER_TEMP/caplock.sarif"
+        md="$RUNNER_TEMP/caplock.md"
+        case "$CAPLOCK_LOCKFILE" in
+          /*) lock="$CAPLOCK_LOCKFILE" ;;
+          *) lock="$CAPLOCK_WORKSPACE/$CAPLOCK_LOCKFILE" ;;
+        esac
+        args=(verify --workspace "$CAPLOCK_WORKSPACE" --lockfile "$lock" --fail-on "$CAPLOCK_FAIL_ON"
+              --report "sarif=$sarif" --report "markdown=$md")
+        if [ "$CAPLOCK_ONLINE" = "true" ]; then args+=(--online); fi
+        # shlex split, never eval: extra-args is data, not shell code (portable to bash 3.2)
+        extra=()
+        while IFS= read -r -d '' a; do extra+=("$a"); done < <(python -c 'import os, shlex, sys; sys.stdout.write("".join(a + "\0" for a in shlex.split(os.environ["CAPLOCK_EXTRA_ARGS"])))')
+        set +e
+        caplock "${args[@]}" ${extra[@]+"${extra[@]}"}
+        code=$?
+        set -e
+        {
+          echo "exit-code=$code"
+          echo "sarif-file=$sarif"
+          echo "markdown-file=$md"
+          if [ -s "$sarif" ]; then echo "sarif-written=true"; else echo "sarif-written=false"; fi
+        } >> "$GITHUB_OUTPUT"
+        if [ -f "$md" ]; then cat "$md" >> "$GITHUB_STEP_SUMMARY"; fi
+        exit 0
+
+    - name: Upload SARIF to code scanning
+      if: ${{ always() && inputs.upload-sarif == 'true' && steps.verify.outputs.sarif-written == 'true' }}
+      uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+      with:
+        sarif_file: ${{ steps.verify.outputs.sarif-file }}
+        category: caplock
+
+    - name: Comment on pull request
+      if: ${{ always() && inputs.comment-pr == 'true' && github.event_name == 'pull_request' }}
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+        CAPLOCK_SRC: ${{ github.action_path }}
+        CAPLOCK_REPO: ${{ github.repository }}
+        CAPLOCK_PR: ${{ github.event.pull_request.number }}
+        CAPLOCK_MD: ${{ steps.verify.outputs.markdown-file }}
+      run: |
+        if [ -f "$CAPLOCK_MD" ]; then
+          python "$CAPLOCK_SRC/scripts/pr_comment.py" --repo "$CAPLOCK_REPO" --pr "$CAPLOCK_PR" --body-file "$CAPLOCK_MD"
+        else
+          echo "::warning title=CapLock::no Markdown report was produced; PR comment skipped"
+        fi
+
+    - name: Apply verify result
+      if: ${{ always() }}
+      shell: bash
+      env:
+        CAPLOCK_CODE: ${{ steps.verify.outputs.exit-code }}
+        CAPLOCK_FAIL_ON: ${{ inputs.fail-on }}
+      run: |
+        case "$CAPLOCK_CODE" in
+          0) echo "CapLock: no finding at or above '$CAPLOCK_FAIL_ON' (identity pinned; behavior not attested)." ;;
+          1) echo "::error title=CapLock::findings at or above '$CAPLOCK_FAIL_ON' need review (exit 1)."; exit 1 ;;
+          2) echo "::error title=CapLock UNVERIFIABLE::some items could not be verified (exit 2). This is not a pass."; exit 2 ;;
+          *) echo "::error title=CapLock::caplock did not complete (exit ${CAPLOCK_CODE:-unknown})."; exit 3 ;;
+        esac

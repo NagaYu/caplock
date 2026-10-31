@@ -1,0 +1,50 @@
+{
+  "axis": "schema",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "get_forecast.days now required",
+  "family": "sch-opt2req",
+  "id": "dev-sch-opt2req-02",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "required_param_added"
+    ],
+    "exit": 1,
+    "maxSeverity": "high"
+  },
+  "mutation": {
+    "weather_tools": {
+      "tools": [
+        {
+          "annotations": {
+            "openWorldHint": true,
+            "readOnlyHint": true
+          },
+          "description": "Get the weather forecast for a city from https://api.weather.example/v2/forecast.",
+          "inputSchema": {
+            "properties": {
+              "city": {
+                "type": "string"
+              },
+              "days": {
+                "default": 3,
+                "maximum": 7,
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "city",
+              "days"
+            ],
+            "type": "object"
+          },
+          "name": "get_forecast"
+        }
+      ]
+    }
+  },
+  "seed": "B",
+  "split": "dev"
+}

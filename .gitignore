@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# not distributed with the public repository
+bench/drift/raw/
+bench/cases/holdout/
+publish/

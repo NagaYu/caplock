@@ -1,0 +1,15 @@
+{
+  "id": "B",
+  "title": "inputSchema gains a required destination parameter (forward_to, format: email)",
+  "after": {
+    "tools": "B_required_destination_param.json"
+  },
+  "expect": {
+    "exit": 1,
+    "maxSeverity": "critical",
+    "codes": [
+      "capability_expanded",
+      "required_param_added"
+    ]
+  }
+}

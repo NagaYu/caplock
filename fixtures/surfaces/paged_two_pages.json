@@ -1,0 +1,4 @@
+[
+  {"tools": [{"name": "list_items", "description": "List items.", "inputSchema": {"type": "object"}, "annotations": {"readOnlyHint": true}}], "nextCursor": "p2"},
+  {"tools": [{"name": "delete_item", "description": "Delete an item permanently.", "inputSchema": {"type": "object", "properties": {"id": {"type": "string"}}, "required": ["id"]}}]}
+]

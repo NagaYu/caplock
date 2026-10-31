@@ -1,0 +1,50 @@
+{
+  "axis": "annotations",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "get_forecast readOnlyHint true \u2192 false",
+  "family": "ann-readonly-false",
+  "id": "dev-ann-readonly-false-02",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "annotation_readonly_revoked",
+      "capability_expanded"
+    ],
+    "exit": 1,
+    "maxSeverity": "critical"
+  },
+  "mutation": {
+    "weather_tools": {
+      "tools": [
+        {
+          "annotations": {
+            "openWorldHint": true,
+            "readOnlyHint": false
+          },
+          "description": "Get the weather forecast for a city from https://api.weather.example/v2/forecast.",
+          "inputSchema": {
+            "properties": {
+              "city": {
+                "type": "string"
+              },
+              "days": {
+                "default": 3,
+                "maximum": 7,
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "city"
+            ],
+            "type": "object"
+          },
+          "name": "get_forecast"
+        }
+      ]
+    }
+  },
+  "seed": "C",
+  "split": "dev"
+}

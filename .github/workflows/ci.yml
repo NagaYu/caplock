@@ -1,0 +1,109 @@
+# CapLock self-test. Runs entirely offline: only the local fixture server is
+# launched, registry data comes from fixtures/, nothing is uploaded or commented.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: python -m pip install ".[test]"
+
+      - name: pytest (all, no network)
+        run: python -m pytest
+
+      - name: Demo
+        run: python scripts/demo.py --brief
+
+      - name: Dogfood (lock -> verify 0 -> scenario F -> verify 1)
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$PWD"
+          WS="$(mktemp -d)/demo-workspace"
+          cp -R examples/demo-workspace "$WS"
+          SRV="python $ROOT/fixtures/servers/notes_server.py --tools $ROOT/fixtures/servers/tools"
+          common=(--workspace "$WS" --registry "$ROOT/fixtures/registry"
+                  --launch "notes=$SRV/benign.json" --launch "weather=$SRV/weather.json")
+          caplock lock "${common[@]}"
+          caplock verify "${common[@]}"
+          set +e
+          caplock verify --registry "$ROOT/fixtures/registry-mutations/F-code-only" "${common[@]}" \
+            --report "sarif=$WS/f.sarif" --report "markdown=$WS/f.md"
+          code=$?
+          set -e
+          echo "scenario F verify exit: $code"
+          test "$code" -eq 1
+          python -c 'import json, sys; r = json.load(open(sys.argv[1]))["runs"][0]["results"]; assert [(x["ruleId"], x["level"]) for x in r] == [("integrity_mismatch", "error")], r' "$WS/f.sarif"
+          grep -q '^\*\*Verdict: FAIL\*\* (exit 1)' "$WS/f.md"
+
+  action-selftest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Lock a copy of the demo workspace
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install .
+          cp -R examples/demo-workspace "$RUNNER_TEMP/selftest"
+          SRV="python $PWD/fixtures/servers/notes_server.py --tools $PWD/fixtures/servers/tools"
+          caplock lock --workspace "$RUNNER_TEMP/selftest" --registry "$PWD/fixtures/registry" \
+            --launch "notes=$SRV/benign.json" --launch "weather=$SRV/weather.json"
+
+      - name: Action on unchanged workspace (expect pass)
+        id: clean
+        uses: ./
+        with:
+          workspace: ${{ runner.temp }}/selftest
+          upload-sarif: "false"
+          comment-pr: "false"
+          extra-args: >-
+            --registry ${{ github.workspace }}/fixtures/registry
+            --launch "notes=python ${{ github.workspace }}/fixtures/servers/notes_server.py --tools ${{ github.workspace }}/fixtures/servers/tools/benign.json"
+            --launch "weather=python ${{ github.workspace }}/fixtures/servers/notes_server.py --tools ${{ github.workspace }}/fixtures/servers/tools/weather.json"
+
+      - name: Action on scenario F (expect exit 1)
+        id: scenario-f
+        continue-on-error: true
+        uses: ./
+        with:
+          workspace: ${{ runner.temp }}/selftest
+          upload-sarif: "false"
+          comment-pr: "false"
+          extra-args: >-
+            --registry ${{ github.workspace }}/fixtures/registry-mutations/F-code-only
+            --registry ${{ github.workspace }}/fixtures/registry
+            --launch "notes=python ${{ github.workspace }}/fixtures/servers/notes_server.py --tools ${{ github.workspace }}/fixtures/servers/tools/benign.json"
+            --launch "weather=python ${{ github.workspace }}/fixtures/servers/notes_server.py --tools ${{ github.workspace }}/fixtures/servers/tools/weather.json"
+
+      - name: Check action outcomes
+        shell: bash
+        env:
+          CLEAN_CODE: ${{ steps.clean.outputs.exit-code }}
+          F_CODE: ${{ steps.scenario-f.outputs.exit-code }}
+          F_OUTCOME: ${{ steps.scenario-f.outcome }}
+        run: |
+          set -euo pipefail
+          echo "clean=$CLEAN_CODE scenarioF=$F_CODE ($F_OUTCOME)"
+          test "$CLEAN_CODE" = 0
+          test "$F_CODE" = 1
+          test "$F_OUTCOME" = failure

@@ -1,0 +1,19 @@
+{
+  "axis": "benign",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "portable config re-indented",
+  "family": "ben-format",
+  "id": "dev-ben-format-03",
+  "labels": {
+    "benign": true,
+    "codes": [],
+    "exit": 0,
+    "maxSeverity": null
+  },
+  "mutation": {
+    "portable_config": "{\n\t\"mcpServers\": {\"weather\": {\"args\": [\"caplock-demo-weather==0.3.1\"], \"command\": \"uvx\"}}\n}\n"
+  },
+  "seed": "H",
+  "split": "dev"
+}

@@ -1,0 +1,21 @@
+{
+  "axis": "floating",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "uvx caplock-demo-weather",
+  "family": "float-pypi",
+  "id": "dev-float-pypi-01",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "floating_version"
+    ],
+    "exit": 2,
+    "maxSeverity": "unverifiable"
+  },
+  "mutation": {
+    "portable_config": "{\n  \"mcpServers\": {\n    \"weather\": {\n      \"command\": \"uvx\",\n      \"args\": [\n        \"caplock-demo-weather\"\n      ]\n    }\n  }\n}\n"
+  },
+  "seed": "G1",
+  "split": "dev"
+}

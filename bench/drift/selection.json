@@ -1,0 +1,702 @@
+{
+  "npm": [
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 26116339,
+      "package": "@playwright/mcp",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.0.82",
+      "publishedAt": "2026-09-18T23:41:20.46032Z",
+      "registryVersion": "0.0.82",
+      "repository": "https://github.com/microsoft/playwright-mcp",
+      "server": "io.github.microsoft/playwright-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 13599595,
+      "package": "firebase-tools",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "runtimeArguments",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "14.27.0",
+      "publishedAt": "2025-12-04T17:56:29.057916Z",
+      "registryVersion": "0.3.0",
+      "repository": "https://github.com/firebase/firebase-tools",
+      "server": "io.github.firebase/firebase-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 9881112,
+      "package": "@storybook/addon-mcp",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.6.0",
+      "publishedAt": "2026-04-14T11:39:54.720432Z",
+      "registryVersion": "0.6.0",
+      "repository": "https://github.com/storybookjs/mcp",
+      "server": "io.github.storybookjs/addon-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 7481529,
+      "package": "chrome-devtools-mcp",
+      "packageFields": [
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "1.12.0",
+      "publishedAt": "2026-10-22T13:50:56.926907Z",
+      "registryVersion": "1.12.0",
+      "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "server": "io.github.ChromeDevTools/chrome-devtools-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 3627326,
+      "package": "color-space",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "3.5.0",
+      "publishedAt": "2026-10-20T02:17:56.60885Z",
+      "registryVersion": "3.5.0",
+      "repository": "https://github.com/colorjs/color-space",
+      "server": "io.github.colorjs/color-space"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 2607063,
+      "package": "@upstash/context7-mcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "4.4.4",
+      "publishedAt": "2026-10-19T13:48:33.320442Z",
+      "registryVersion": "4.4.4",
+      "repository": "https://github.com/upstash/context7",
+      "server": "io.github.upstash/context7"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 2481405,
+      "package": "snyk",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "1.1304.2",
+      "publishedAt": "2026-05-06T18:44:18.118349Z",
+      "registryVersion": "1.1304.2",
+      "repository": "https://github.com/snyk/studio-mcp",
+      "server": "io.snyk/mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 1740177,
+      "package": "telnyx",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "6.29.3",
+      "publishedAt": "2026-03-28T21:38:57.930547Z",
+      "registryVersion": "6.29.3",
+      "repository": "https://github.com/team-telnyx/telnyx-node",
+      "server": "io.github.team-telnyx/telnyx"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 1484183,
+      "package": "@wonderwhy-er/desktop-commander",
+      "packageFields": [
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.3.1",
+      "publishedAt": "2026-10-22T08:16:02.524163Z",
+      "registryVersion": "0.3.1",
+      "repository": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "server": "io.github.wonderwhy-er/desktop-commander"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 1326372,
+      "package": "agent-device",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.21.35",
+      "publishedAt": "2026-10-29T19:10:45.615443Z",
+      "registryVersion": "0.21.35",
+      "repository": "https://github.com/callstack/agent-device",
+      "server": "io.github.callstack/agent-device"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 1242598,
+      "package": "e2e",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.22.0",
+      "publishedAt": "2026-10-30T16:28:50.587242Z",
+      "registryVersion": "0.22.0",
+      "repository": "https://github.com/tester-army/e2e",
+      "server": "io.github.tester-army/e2e"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 1172649,
+      "package": "rea-agents",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "6.8.0",
+      "publishedAt": "2026-10-25T09:11:11.166659Z",
+      "registryVersion": "6.8.0",
+      "repository": "https://github.com/morluto/rea",
+      "server": "io.github.morluto/rea"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 603953,
+      "package": "@zereight/mcp-gitlab",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "2.3.17",
+      "publishedAt": "2026-10-31T01:09:25.455734Z",
+      "registryVersion": "2.3.17",
+      "repository": "https://github.com/zereight/gitlab-mcp",
+      "server": "io.github.zereight/gitlab-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 589023,
+      "package": "@swmansion/argent",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.19.0",
+      "publishedAt": "2026-08-10T11:16:57.44583Z",
+      "registryVersion": "0.19.0",
+      "repository": "https://github.com/software-mansion/argent",
+      "server": "io.github.software-mansion/argent"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 580593,
+      "package": "firecrawl-mcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "3.36.0",
+      "publishedAt": "2026-10-27T23:06:39.322741Z",
+      "registryVersion": "3.36.0",
+      "repository": "https://github.com/firecrawl/firecrawl-mcp-server.git",
+      "server": "io.github.firecrawl/firecrawl-mcp-server"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 480809,
+      "package": "mongodb-mcp-server",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "packageArguments",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "3.2.1",
+      "publishedAt": "2026-10-28T16:05:19.604548Z",
+      "registryVersion": "3.2.1",
+      "repository": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "server": "io.github.mongodb-js/mongodb-mcp-server"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 474290,
+      "package": "@sentry/mcp-server",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.42.0",
+      "publishedAt": "2026-09-25T14:49:17.516259Z",
+      "registryVersion": "0.42.0",
+      "repository": "https://github.com/getsentry/sentry-mcp",
+      "server": "io.github.getsentry/sentry-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 452070,
+      "package": "next-devtools-mcp",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.3.6",
+      "publishedAt": "2025-12-05T13:38:56.040579Z",
+      "registryVersion": "0.3.6",
+      "repository": "https://github.com/vercel/next-devtools-mcp",
+      "server": "io.github.vercel/next-devtools-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 369174,
+      "package": "figma-developer-mcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "packageArguments",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.13.2",
+      "publishedAt": "2026-06-18T16:38:55.772349Z",
+      "registryVersion": "0.13.2",
+      "repository": "https://github.com/GLips/Figma-Context-MCP",
+      "server": "io.github.GLips/Figma-Context-MCP"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 360024,
+      "package": "@sap-ux/fiori-mcp-server",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "1.15.20",
+      "publishedAt": "2026-10-30T18:14:12.960425Z",
+      "registryVersion": "1.15.20",
+      "repository": "https://github.com/SAP/open-ux-tools",
+      "server": "io.github.SAP/fiori-mcp-server"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 348157,
+      "package": "repomix",
+      "packageFields": [
+        "identifier",
+        "packageArguments",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeArguments",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "1.18.1",
+      "publishedAt": "2026-09-21T08:28:27.809173Z",
+      "registryVersion": "1.18.1",
+      "repository": "https://github.com/yamadashy/repomix",
+      "server": "io.github.yamadashy/repomix"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 339804,
+      "package": "@hostinger/mcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "3.24.1",
+      "publishedAt": "2026-10-30T13:03:21.572403Z",
+      "registryVersion": "3.24.1",
+      "repository": "https://github.com/hostinger/api-mcp-server",
+      "server": "io.github.hostinger/hostinger-api-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 333620,
+      "package": "@ui5/mcp-server",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.3.2",
+      "publishedAt": "2026-10-06T08:07:19.722367Z",
+      "registryVersion": "0.3.2",
+      "repository": "https://github.com/UI5/mcp-server",
+      "server": "io.github.UI5/mcp-server"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 330564,
+      "package": "@supabase/mcp-server-supabase",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeArguments",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.14.0",
+      "publishedAt": "2026-10-14T15:34:03.096613Z",
+      "registryVersion": "0.14.0",
+      "repository": "https://github.com/supabase/mcp",
+      "server": "com.supabase/mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 310605,
+      "package": "xcodebuildmcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "2.7.0",
+      "publishedAt": "2026-07-23T14:09:01.649564Z",
+      "registryVersion": "2.7.0",
+      "repository": "https://github.com/getsentry/XcodeBuildMCP",
+      "server": "com.xcodebuildmcp/XcodeBuildMCP"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 280272,
+      "package": "nx-mcp",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.6.12",
+      "publishedAt": "2025-09-23T09:55:22.303227Z",
+      "registryVersion": "0.6.12",
+      "repository": "https://github.com/nrwl/nx-console",
+      "server": "io.github.nrwl/nx-console"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 233004,
+      "package": "@softeria/ms-365-mcp-server",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.178.0",
+      "publishedAt": "2026-10-30T21:33:09.326619Z",
+      "registryVersion": "0.178.0",
+      "repository": "https://github.com/Softeria/ms-365-mcp-server",
+      "server": "io.github.Softeria/ms-365-mcp-server"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 209212,
+      "package": "@cap-js/mcp-server",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.1.0",
+      "publishedAt": "2026-10-26T14:45:23.956684Z",
+      "registryVersion": "0.1.0",
+      "repository": "https://github.com/cap-js/mcp-server",
+      "server": "io.github.cap-js/mcp-server"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 193786,
+      "package": "@mobilenext/mobile-mcp",
+      "packageFields": [
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "1.0.15",
+      "publishedAt": "2026-10-30T16:05:27.686864Z",
+      "registryVersion": "1.0.15",
+      "repository": "https://github.com/mobile-next/mobile-mcp",
+      "server": "io.github.mobile-next/mobile-mcp"
+    },
+    {
+      "ecosystem": "npm",
+      "npmDownloadsLastMonth": 188015,
+      "package": "@serdnaley/metabase-mcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.4.0",
+      "publishedAt": "2026-10-26T10:36:02.828448Z",
+      "registryVersion": "0.4.0",
+      "repository": "https://github.com/Serdnaley/metabase-mcp",
+      "server": "io.github.Serdnaley/metabase-mcp"
+    }
+  ],
+  "pypi": [
+    {
+      "ecosystem": "pypi",
+      "package": "patent-checker",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "packageArguments",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "1.4.1",
+      "publishedAt": "2026-10-08T01:34:39.95649Z",
+      "registryVersion": "1.4.1",
+      "repository": "https://github.com/xhighhongo41/patent-checker",
+      "server": "io.github.xhighhongo41/patent-checker"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "rba-mcp",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.8.11",
+      "publishedAt": "2026-08-15T04:31:25.228391Z",
+      "registryVersion": "0.8.11",
+      "repository": "https://github.com/Bigred97/rba-mcp",
+      "server": "io.ausdata/rba-mcp"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "arxiv-mcp-server",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "packageArguments",
+        "registryBaseUrl",
+        "registryType",
+        "runtimeArguments",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.8.2",
+      "publishedAt": "2026-10-08T13:09:35.421603Z",
+      "registryVersion": "0.8.2",
+      "repository": "https://github.com/blazickjp/arxiv-mcp-server",
+      "server": "io.github.blazickjp/arxiv-mcp-server"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "macos-mcp",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "runtimeArguments",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.3.6",
+      "publishedAt": "2026-05-22T08:09:56.432736Z",
+      "registryVersion": "0.3.6",
+      "repository": "https://github.com/Jeomon/macos-mcp",
+      "server": "io.github.Jeomon/macos-mcp"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ultimate-gemini-mcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "6.0.21",
+      "publishedAt": "2026-09-23T10:12:23.592925Z",
+      "registryVersion": "6.0.21",
+      "repository": "https://github.com/nikships/ultimate-image-gen-mcp",
+      "server": "io.github.nikships/ultimate-image-gen-mcp"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "systemr",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "1.0.2",
+      "publishedAt": "2026-03-08T13:28:28.346957Z",
+      "registryVersion": "1.1.0",
+      "repository": "https://github.com/System-R-AI/systemr-python",
+      "server": "io.github.System-R-AI/systemr-risk-intelligence"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "promptready-mcp",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.4.0",
+      "publishedAt": "2026-10-02T05:19:21.903731Z",
+      "registryVersion": "0.4.0",
+      "repository": "https://github.com/hydrojwh/promptready-mcp",
+      "server": "io.github.hydrojwh/promptready-mcp"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mcp-sport",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "runtimeHint",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.1.0",
+      "publishedAt": "2026-09-22T00:11:38.639775Z",
+      "registryVersion": "0.1.0",
+      "repository": "https://github.com/andrequeiroz2/mcp-sport",
+      "server": "io.github.andrequeiroz2/mcp-sport"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "stochastly-mcp",
+      "packageFields": [
+        "environmentVariables",
+        "identifier",
+        "registryBaseUrl",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.2.2",
+      "publishedAt": "2026-10-18T16:09:35.311491Z",
+      "registryVersion": "0.2.2",
+      "repository": "https://github.com/Stochastly/stochastly-mcp",
+      "server": "com.stochastly/desktop"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "noether-physics",
+      "packageFields": [
+        "identifier",
+        "registryType",
+        "transport",
+        "version"
+      ],
+      "packageVersion": "0.1.2",
+      "publishedAt": "2026-09-06T22:54:05.312912Z",
+      "registryVersion": "0.1.2",
+      "repository": "https://github.com/Ranshiv/noether-physics",
+      "server": "io.github.Ranshiv/noether-physics"
+    }
+  ],
+  "rule": {
+    "npm": "top 30 distinct npm packages by last-month downloads among active latest registry entries with exactly one npm/PyPI package. Unscoped: api.npmjs.org bulk downloads. Scoped (no bulk API): the monthly count npm search reports for its first 2000 results of text=mcp; scoped packages outside that window have no count and rank last.",
+    "pypi": "random sample of 10 distinct PyPI packages (random.Random(0), sorted by name) among the same registry entries; not a top list, because PyPI has no first-party download statistics"
+  },
+  "selectedAt": "2026-10-31T05:04:14Z"
+}

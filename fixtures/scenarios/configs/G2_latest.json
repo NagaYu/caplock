@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "notes": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@caplock-demo/notes-mcp@latest"],
+      "env": { "NOTES_TOKEN": "${env:NOTES_TOKEN}" }
+    }
+  }
+}

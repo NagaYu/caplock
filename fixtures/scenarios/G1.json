@@ -1,0 +1,14 @@
+{
+  "id": "G1",
+  "title": "Floating spec: no version",
+  "after": {
+    "vscode_config": "G1_no_version.json"
+  },
+  "expect": {
+    "exit": 2,
+    "maxSeverity": "unverifiable",
+    "codes": [
+      "floating_version"
+    ]
+  }
+}

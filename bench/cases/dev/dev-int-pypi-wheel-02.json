@@ -1,0 +1,63 @@
+{
+  "axis": "integrity",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "caplock-demo-weather 0.3.1 wheel and sdist sha256 replaced",
+  "family": "int-pypi-wheel",
+  "id": "dev-int-pypi-wheel-02",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "integrity_mismatch"
+    ],
+    "exit": 1,
+    "maxSeverity": "critical"
+  },
+  "mutation": {
+    "registry_overlay": {
+      "pypi/caplock-demo-weather.json": {
+        "_fixture": "Bench overlay (synthetic).",
+        "info": {
+          "name": "caplock-demo-weather",
+          "version": "0.3.1"
+        },
+        "releases": {
+          "0.3.0": [
+            {
+              "digests": {
+                "sha256": "01b488ac81966b9c90dd01558af791cd43aeb87392fced3885bfb28cb0d549b2"
+              },
+              "filename": "caplock_demo_weather-0.3.0-py3-none-any.whl",
+              "packagetype": "bdist_wheel"
+            },
+            {
+              "digests": {
+                "sha256": "8e3127445ed43334129a95cce1339babf6c02e81a9d836dd33df55b5d0c78f65"
+              },
+              "filename": "caplock_demo_weather-0.3.0.tar.gz",
+              "packagetype": "sdist"
+            }
+          ],
+          "0.3.1": [
+            {
+              "digests": {
+                "sha256": "7eef64da223e5976e95ebcfda636c510e8d747a44935be56d040e68e761e649f"
+              },
+              "filename": "caplock_demo_weather-0.3.1-py3-none-any.whl",
+              "packagetype": "bdist_wheel"
+            },
+            {
+              "digests": {
+                "sha256": "b66503a36d2032ef5eec6861b99701d15558fc1a46e84e8ddd1bd925b5eee3c2"
+              },
+              "filename": "caplock_demo_weather-0.3.1.tar.gz",
+              "packagetype": "sdist"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "seed": "F-pypi",
+  "split": "dev"
+}

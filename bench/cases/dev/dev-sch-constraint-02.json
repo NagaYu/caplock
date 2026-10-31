@@ -1,0 +1,49 @@
+{
+  "axis": "schema",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "get_forecast.days maximum 7 \u2192 365",
+  "family": "sch-constraint",
+  "id": "dev-sch-constraint-02",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "schema_changed"
+    ],
+    "exit": 0,
+    "maxSeverity": "medium"
+  },
+  "mutation": {
+    "weather_tools": {
+      "tools": [
+        {
+          "annotations": {
+            "openWorldHint": true,
+            "readOnlyHint": true
+          },
+          "description": "Get the weather forecast for a city from https://api.weather.example/v2/forecast.",
+          "inputSchema": {
+            "properties": {
+              "city": {
+                "type": "string"
+              },
+              "days": {
+                "default": 3,
+                "maximum": 365,
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "city"
+            ],
+            "type": "object"
+          },
+          "name": "get_forecast"
+        }
+      ]
+    }
+  },
+  "seed": "B",
+  "split": "dev"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "C",
+  "title": "annotations.readOnlyHint flipped true -> false",
+  "after": {
+    "tools": "C_readonly_flipped.json"
+  },
+  "expect": {
+    "exit": 1,
+    "maxSeverity": "critical",
+    "codes": [
+      "annotation_readonly_revoked",
+      "capability_expanded"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_fixture": "Recorded fixture. Synthetic package in the caplock-demo namespace; integrity values are deterministic test data, not real artifacts.",
+  "name": "@caplock-demo/notes-mcp",
+  "dist-tags": {
+    "latest": "1.0.1"
+  },
+  "versions": {
+    "1.0.0": {
+      "name": "@caplock-demo/notes-mcp",
+      "version": "1.0.0",
+      "dist": {
+        "integrity": "sha512-H+lxX37g0An1AealGqeCK5YNW5Ur3dYzxCuONhXMVFzZBbBc5P1khAf0D6aRs5OXmsxMuEaL/9bv1imO98VkIQ==",
+        "tarball": "https://registry.npmjs.org/@caplock-demo/notes-mcp/-/notes-mcp-1.0.0.tgz"
+      }
+    },
+    "1.0.1": {
+      "name": "@caplock-demo/notes-mcp",
+      "version": "1.0.1",
+      "dist": {
+        "integrity": "sha512-rhfBjzj5lB5e1FXzZdBGkFQfY4npUL2XRWh+9zoRiWSyYC+kTn0mSycfV26bH3trz4YaV7VnUsWWqs1iLujaPg==",
+        "tarball": "https://registry.npmjs.org/@caplock-demo/notes-mcp/-/notes-mcp-1.0.1.tgz"
+      }
+    }
+  }
+}

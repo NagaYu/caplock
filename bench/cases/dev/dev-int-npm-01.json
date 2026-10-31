@@ -1,0 +1,47 @@
+{
+  "axis": "integrity",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "@caplock-demo/notes-mcp@1.0.0 integrity replaced (variant 1)",
+  "family": "int-npm",
+  "id": "dev-int-npm-01",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "integrity_mismatch"
+    ],
+    "exit": 1,
+    "maxSeverity": "critical"
+  },
+  "mutation": {
+    "registry_overlay": {
+      "npm/@caplock-demo__notes-mcp.json": {
+        "_fixture": "Bench overlay (synthetic).",
+        "dist-tags": {
+          "latest": "1.0.1"
+        },
+        "name": "@caplock-demo/notes-mcp",
+        "versions": {
+          "1.0.0": {
+            "dist": {
+              "integrity": "sha512-SfRa0hyiTJH0XPTlqBKN2LnU+cMm28aeCu7M5MusGuit53vD3NPKv01sijZW8zSdiaZbQCqF6wG4/pbYa4tBig==",
+              "tarball": "https://registry.npmjs.org/@caplock-demo/notes-mcp/-/notes-mcp-1.0.0.tgz"
+            },
+            "name": "@caplock-demo/notes-mcp",
+            "version": "1.0.0"
+          },
+          "1.0.1": {
+            "dist": {
+              "integrity": "sha512-rhfBjzj5lB5e1FXzZdBGkFQfY4npUL2XRWh+9zoRiWSyYC+kTn0mSycfV26bH3trz4YaV7VnUsWWqs1iLujaPg==",
+              "tarball": "https://registry.npmjs.org/@caplock-demo/notes-mcp/-/notes-mcp-1.0.1.tgz"
+            },
+            "name": "@caplock-demo/notes-mcp",
+            "version": "1.0.1"
+          }
+        }
+      }
+    }
+  },
+  "seed": "F",
+  "split": "dev"
+}

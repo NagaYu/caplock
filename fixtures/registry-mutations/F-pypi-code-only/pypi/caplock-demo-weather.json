@@ -1,0 +1,41 @@
+{
+  "_fixture": "Step 0 overlay: caplock-demo-weather 0.3.1 wheel now has a different sha256 (code-only change; sdist and tool definitions unchanged).",
+  "info": {
+    "name": "caplock-demo-weather",
+    "version": "0.3.1"
+  },
+  "releases": {
+    "0.3.0": [
+      {
+        "filename": "caplock_demo_weather-0.3.0-py3-none-any.whl",
+        "packagetype": "bdist_wheel",
+        "digests": {
+          "sha256": "01b488ac81966b9c90dd01558af791cd43aeb87392fced3885bfb28cb0d549b2"
+        }
+      },
+      {
+        "filename": "caplock_demo_weather-0.3.0.tar.gz",
+        "packagetype": "sdist",
+        "digests": {
+          "sha256": "8e3127445ed43334129a95cce1339babf6c02e81a9d836dd33df55b5d0c78f65"
+        }
+      }
+    ],
+    "0.3.1": [
+      {
+        "filename": "caplock_demo_weather-0.3.1-py3-none-any.whl",
+        "packagetype": "bdist_wheel",
+        "digests": {
+          "sha256": "a5fab4972717403ea6baa0d26cb913a680aa1bc1727d1eb85a33a2cf064e8e00"
+        }
+      },
+      {
+        "filename": "caplock_demo_weather-0.3.1.tar.gz",
+        "packagetype": "sdist",
+        "digests": {
+          "sha256": "b56ff02086b67a51e4fbd929b32ebdcc25cc4694b8b3d4538e321cabc67e9e8e"
+        }
+      }
+    ]
+  }
+}

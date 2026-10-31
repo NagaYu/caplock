@@ -1,0 +1,13 @@
+{
+  "id": "H",
+  "title": "Benign: key order, formatting, Unicode normalization form and number spelling only",
+  "after": {
+    "vscode_config": "H_reformatted.json",
+    "tools": "H_reformatted.json"
+  },
+  "expect": {
+    "exit": 0,
+    "maxSeverity": null,
+    "codes": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "tools": [
+    {
+      "name": "get_forecast",
+      "description": "Get the weather forecast for a city from https://api.weather.example/v2/forecast.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "days": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7,
+            "default": 3
+          }
+        },
+        "required": [
+          "city"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true
+      }
+    }
+  ]
+}

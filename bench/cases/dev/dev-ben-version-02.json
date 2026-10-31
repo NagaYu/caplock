@@ -1,0 +1,21 @@
+{
+  "axis": "benign",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "weather 0.3.1 \u2192 0.3.0",
+  "family": "ben-version",
+  "id": "dev-ben-version-02",
+  "labels": {
+    "benign": true,
+    "codes": [
+      "version_changed"
+    ],
+    "exit": 0,
+    "maxSeverity": "info"
+  },
+  "mutation": {
+    "portable_config": "{\n  \"mcpServers\": {\n    \"weather\": {\n      \"command\": \"uvx\",\n      \"args\": [\n        \"caplock-demo-weather==0.3.0\"\n      ]\n    }\n  }\n}\n"
+  },
+  "seed": "I",
+  "split": "dev"
+}

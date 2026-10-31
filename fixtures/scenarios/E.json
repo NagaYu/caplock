@@ -1,0 +1,14 @@
+{
+  "id": "E",
+  "title": "Tool removed (fetch_status)",
+  "after": {
+    "tools": "E_tool_removed.json"
+  },
+  "expect": {
+    "exit": 0,
+    "maxSeverity": "medium",
+    "codes": [
+      "tool_removed"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "axis": "floating",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "npx @caplock-demo/notes-mcp",
+  "family": "float-npm-basic",
+  "id": "dev-float-npm-basic-01",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "floating_version"
+    ],
+    "exit": 2,
+    "maxSeverity": "unverifiable"
+  },
+  "mutation": {
+    "vscode_config": "{\n  \"servers\": {\n    \"notes\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@caplock-demo/notes-mcp\"\n      ],\n      \"env\": {\n        \"NOTES_TOKEN\": \"${env:NOTES_TOKEN}\"\n      }\n    }\n  }\n}\n"
+  },
+  "seed": "G1/G2",
+  "split": "dev"
+}

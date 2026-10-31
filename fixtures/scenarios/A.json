@@ -1,0 +1,15 @@
+{
+  "id": "A",
+  "title": "Tool poisoning: instruction text injected into a description",
+  "after": {
+    "tools": "A_poisoned_description.json"
+  },
+  "expect": {
+    "exit": 1,
+    "maxSeverity": "high",
+    "codes": [
+      "description_changed",
+      "instruction_injection"
+    ]
+  }
+}

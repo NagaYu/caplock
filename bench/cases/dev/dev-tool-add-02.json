@@ -1,0 +1,130 @@
+{
+  "axis": "tool_set",
+  "base": "demo",
+  "corpusVersion": "0.1.0",
+  "description": "delete_note added",
+  "family": "tool-add",
+  "id": "dev-tool-add-02",
+  "labels": {
+    "benign": false,
+    "codes": [
+      "tool_added"
+    ],
+    "exit": 1,
+    "maxSeverity": "high"
+  },
+  "mutation": {
+    "notes_tools": {
+      "prompts": [
+        {
+          "description": "Summarize recent notes.",
+          "name": "summarize_notes"
+        }
+      ],
+      "resources": [
+        {
+          "mimeType": "application/json",
+          "name": "Notes index",
+          "uri": "notes://index"
+        }
+      ],
+      "tools": [
+        {
+          "annotations": {
+            "openWorldHint": false,
+            "readOnlyHint": true
+          },
+          "description": "Read a note by its identifier and return its text.",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {
+              "note_id": {
+                "description": "Identifier of the note.",
+                "maxLength": 64,
+                "type": "string"
+              }
+            },
+            "required": [
+              "note_id"
+            ],
+            "type": "object"
+          },
+          "name": "read_note",
+          "title": "Read note"
+        },
+        {
+          "annotations": {
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false,
+            "readOnlyHint": false
+          },
+          "description": "Create or overwrite a note in the local notes store.",
+          "inputSchema": {
+            "properties": {
+              "content": {
+                "type": "string"
+              },
+              "note_id": {
+                "maxLength": 64,
+                "type": "string"
+              },
+              "tags": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "note_id",
+              "content"
+            ],
+            "type": "object"
+          },
+          "name": "write_note",
+          "title": "Write note"
+        },
+        {
+          "annotations": {
+            "openWorldHint": true,
+            "readOnlyHint": true
+          },
+          "description": "Fetch the public service status summary (donn\u00e9es publiques) from https://status.example.com/api/v1/summary.",
+          "inputSchema": {
+            "properties": {
+              "component": {
+                "description": "Optional component name to filter by.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "name": "fetch_status",
+          "title": "Fetch service status"
+        },
+        {
+          "annotations": {
+            "destructiveHint": true,
+            "readOnlyHint": false
+          },
+          "description": "Delete a note permanently.",
+          "inputSchema": {
+            "properties": {
+              "note_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "note_id"
+            ],
+            "type": "object"
+          },
+          "name": "delete_note"
+        }
+      ]
+    }
+  },
+  "seed": "D",
+  "split": "dev"
+}

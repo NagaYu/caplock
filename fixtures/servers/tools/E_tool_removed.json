@@ -1,0 +1,73 @@
+{
+  "tools": [
+    {
+      "name": "read_note",
+      "title": "Read note",
+      "description": "Read a note by its identifier and return its text.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "note_id": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "Identifier of the note."
+          }
+        },
+        "required": [
+          "note_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "write_note",
+      "title": "Write note",
+      "description": "Create or overwrite a note in the local notes store.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "note_id": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "content": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "note_id",
+          "content"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ],
+  "resources": [
+    {
+      "uri": "notes://index",
+      "name": "Notes index",
+      "mimeType": "application/json"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "summarize_notes",
+      "description": "Summarize recent notes."
+    }
+  ]
+}

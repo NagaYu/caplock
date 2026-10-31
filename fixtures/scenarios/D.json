@@ -1,0 +1,14 @@
+{
+  "id": "D",
+  "title": "New tool added (run_command, exec)",
+  "after": {
+    "tools": "D_tool_added.json"
+  },
+  "expect": {
+    "exit": 1,
+    "maxSeverity": "high",
+    "codes": [
+      "tool_added"
+    ]
+  }
+}
