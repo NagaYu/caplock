@@ -445,7 +445,9 @@ Phase 2 で追加した限界:
 - 同じ (server, tool, code, field) を持つ複数の finding（例: 同じ説明文に命令的文言のパターンが 3 つ）は、
   SARIF では同じ fingerprint になり、code scanning では 1 つの alert にまとまります。
 - PR コメントは GitHub の上限に合わせて 65,000 文字で切り詰めます（全文はジョブサマリと SARIF にあります）。
-- Action の動作は、`ci.yml` の手順をローカルで再現して確かめたものです。GitHub 上ではまだ実行していません。
+- Action は GitHub Actions 上の `ci.yml` でセルフテストしています（初回実行 run 41189126256 で `test` と
+  `action-selftest` の両ジョブが成功）。ただしセルフテストでは `upload-sarif` と `comment-pr` を
+  無効にしているため、この 2 ステップは GitHub 上ではまだ実行していません。
 
 Phase 3 で追加した限界:
 - 証跡パックは無署名です。検出できるのは生成後の改竄だけで、出所は証明しません。
@@ -467,7 +469,7 @@ Phase 3 で追加した限界:
 .venv/bin/python scripts/demo.py
 ```
 
-構成は `CLAUDE.md` を参照してください。シナリオ A〜I の定義と期待値は
+シナリオ A〜I の定義と期待値は
 `fixtures/scenarios/*.json` にあり、テストとデモはどちらもここを参照します。
 
 ## License
